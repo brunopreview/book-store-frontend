@@ -8,7 +8,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 module.exports = {
 	devServer: {
 		host: "localhost",
-		port: 9000
+		port: 8080
 	},
 	module: {
 		rules: [
