@@ -1,8 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDom from "react-dom";
 
-const Index = () => {
-  return <div>Hello React!</div>;
+const App = () => {
+	return <div className='container'>Hello React!</div>;
 };
 
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDom.render(<App />, document.getElementById("app"));

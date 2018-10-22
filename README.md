@@ -27,7 +27,7 @@ npm i babel-core babel-loader babel-preset-env babel-preset-react css-loader htm
 5. Create **.babelrc** file with the following configurations:
 ```
 {
-  "presets": ["env", "react"]
+	"presets": ["env", "react"]
 }
 ```
 5. Create **webpack.config.js** file with the following configurations:
@@ -35,41 +35,41 @@ npm i babel-core babel-loader babel-preset-env babel-preset-react css-loader htm
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
+	template: "./src/index.html",
+	filename: "./index.html"
 });
 
 module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
-              sourceMap: true,
-              minimize: true
-            }
-          }
-        ]
-      }
-    ]
-  },
-  plugins: [htmlWebpackPlugin]
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader"
+				}
+			},
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: "style-loader"
+					},
+					{
+						loader: "css-loader",
+						options: {
+							modules: true,
+							importLoaders: 1,
+							localIdentName: "[name]_[local]_[hash:base64]",
+							sourceMap: true,
+							minimize: true
+						}
+					}
+				]
+			}
+		]
+	},
+	plugins: [htmlWebpackPlugin]
 };
 ```
 7. Create **src** folder with **index.js** and **index.html** file.
@@ -79,7 +79,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const Index = () => {
-  return <div>Hello React!</div>;
+	return <div>Hello React!</div>;
 };
 
 ReactDOM.render(<Index />, document.getElementById("index"));
@@ -89,13 +89,13 @@ ReactDOM.render(<Index />, document.getElementById("index"));
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>React and Webpack4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>React and Webpack4</title>
 </head>
 <body>
-  <section id="index"></section>
+	<section id="index"></section>
 </body>
 </html>
 ```
